@@ -24,16 +24,17 @@ Embassy-rp HAL for DHT22, a temperature and humidity sensor. Utilizes async func
 
 ### Usage
 
-It is important to use the function as a separate task without external blocking or interruption as it can deter the reading task causing high timeout or generic timeout error readings. This also allows us to use the async programming as it is intended to. 
-An example of implemtation async function is shown below. 
+It is important to use the function as a separate task without external blocking or interruption, as this can interfere with the reading process, potentially causing high timeouts or generic timeout errors. Running the function asynchronously ensures it operates as intended within an async programming model.
 
-'''rust 
+An example of an asynchronous implementation is shown below:
+
+```rust
 #[embassy_executor::task]
 async fn dht22_task(mut dht: DHT22<'static>) {
     loop {
         match dht.read().await {
             Ok(reading) => {
-                log::info!("DHT22 Reading: Temp = {}, Hum = {}", reading.temp, reading.hum);
+                log::info!("DHT22 Reading: Temp = {}°C, Humidity = {}%", reading.temp, reading.hum);
             }
             Err(e) => {
                 log::warn!("DHT22 read error: {:?}", e);
@@ -42,10 +43,11 @@ async fn dht22_task(mut dht: DHT22<'static>) {
         Timer::after(Duration::from_secs(2)).await; 
     }
 }
-'''
+```
 
 In the main function the module can be initalized using a Flex pin and Spawner
-'''
+
+```rust
 let dht = DHT22::new(Flex::new(rp.PIN_22));
 spawner.spawn(dht22_task(dht)).unwrap();
-'''
+```
