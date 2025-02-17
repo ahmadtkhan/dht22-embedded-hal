@@ -1,0 +1,1 @@
+/home/ahmadkhan/Documents/capstone/rp2040/test0121/dht22/target/thumbv6m-none-eabi/debug/dht22: /home/ahmadkhan/Documents/capstone/rp2040/test0121/dht22/src/dht22.rs /home/ahmadkhan/Documents/capstone/rp2040/test0121/dht22/src/error.rs

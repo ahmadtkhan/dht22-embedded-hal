@@ -1,0 +1,25 @@
+[package]
+edition = "2021"
+name = "dht22-embedded-hal"
+version = "0.1.0"
+authors = ["Ahmad Khan <aktariq640@gmail.com>"]
+description = "Driver to interface DHT22 sensor with RP2040 microcontrollers." 
+
+[lib]
+name = "dht22_embedded_hal"
+path = "src/lib.rs"
+
+[dependencies]
+embassy-executor = { version = "0.7.0", features = ["arch-cortex-m", "executor-thread", "executor-interrupt"] }
+embassy-rp = { version = "0.3.0", features = ["rp2040", "time-driver", "critical-section-impl"] }
+embassy-time = "0.4.0"
+
+cortex-m = "0.7.7"
+cortex-m-rt = "0.7.5"
+
+log = "0.4.25"
+
+libm = "0.2"
+
+panic-probe = "0.3"
+

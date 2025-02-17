@@ -1,0 +1,7 @@
+/home/ahmadkhan/Documents/capstone/rp2040/test0121/dht22/target/thumbv6m-none-eabi/debug/deps/libbare_metal-e13a92d12cd0f4f5.rmeta: /home/ahmadkhan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bare-metal-0.2.5/src/lib.rs
+
+/home/ahmadkhan/Documents/capstone/rp2040/test0121/dht22/target/thumbv6m-none-eabi/debug/deps/libbare_metal-e13a92d12cd0f4f5.rlib: /home/ahmadkhan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bare-metal-0.2.5/src/lib.rs
+
+/home/ahmadkhan/Documents/capstone/rp2040/test0121/dht22/target/thumbv6m-none-eabi/debug/deps/bare_metal-e13a92d12cd0f4f5.d: /home/ahmadkhan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bare-metal-0.2.5/src/lib.rs
+
+/home/ahmadkhan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bare-metal-0.2.5/src/lib.rs:
